@@ -395,6 +395,12 @@ config SIZE_OPTIMIZATIONS
 	  Compiler optimizations will be set to -Os independently of other
 	  options.
 
+config MIN_SIZE_OPTIMIZATIONS
+	bool "Optimize for size at the expense of speed"
+	help
+	  Compiler optimizations will be set to -Oz independently of other
+	  options.
+
 config SPEED_OPTIMIZATIONS
 	bool "Optimize for speed"
 	help

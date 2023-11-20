@@ -20,6 +20,12 @@ else()
 endif()
 set_compiler_property(PROPERTY optimization_speed -O2)
 set_compiler_property(PROPERTY optimization_size  -Os)
+# TODO: confirm if latest Zephyr SDK version supports -Oz. If so, I think this
+# should be fine here, otherwise it needs moved to clang flags.
+# TODO: will probably need to version gate this as above even if Zephyr SDK's
+# latest gcc has suppoprt (I think GCC 10.x didn't).
+# TODO: fix naming, this probably needs some discussion with community.
+set_compiler_property(PROPERTY optimization_min_size -Oz)
 
 #######################################################
 # This section covers flags related to warning levels #

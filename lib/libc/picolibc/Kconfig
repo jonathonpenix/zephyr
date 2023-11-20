@@ -70,6 +70,8 @@ endchoice
 
 if PICOLIBC_USE_MODULE
 
+# TODO: I don't understand where this gets picked up. Figure out how to
+# get this to work with -Oz
 choice PICOLIBC_OPTIMIZATIONS
 	prompt "Optimization level"
 	default PICOLIBC_SIZE_OPTIMIZATIONS if SIZE_OPTIMIZATIONS

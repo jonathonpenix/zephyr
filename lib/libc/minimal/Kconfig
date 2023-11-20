@@ -63,6 +63,7 @@ config MINIMAL_LIBC_LL_PRINTF
 
 config MINIMAL_LIBC_OPTIMIZE_STRING_FOR_SIZE
 	bool "Use size optimized string functions"
+	# TODO: I'd like to have this work with our Oz setting, not sure how.
 	default y if SIZE_OPTIMIZATIONS
 	help
 	  Enable smaller but potentially slower implementations of memcpy and
