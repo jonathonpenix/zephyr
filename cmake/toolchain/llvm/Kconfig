@@ -17,3 +17,8 @@ config LLVM_USE_LLD
 	  Use LLVM built-in lld linker with llvm/clang.
 
 endchoice
+
+# jpenix TODO: probably gate this per target
+config TOOLCHAIN_LLVM_SUPPORTS_THREAD_LOCAL_STORAGE
+        def_bool y
+        select TOOLCHAIN_SUPPORTS_THREAD_LOCAL_STORAGE
